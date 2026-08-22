@@ -6,9 +6,7 @@ public:
         int len = s.size();
         stack <char> st;
         for(int i = 0 ; i < len; i++){
-              if(s[i] == '(' || s[i] == '{' || s[i] == '['){
-            st.emplace(s[i]);
-            }
+             
             if(s[i] == ')'){
                 if(!st.empty() && st.top() == '('){
                     st.pop();
@@ -27,6 +25,9 @@ public:
                 }else{
                     return false;
                 }
+            }
+             if(s[i] == '(' || s[i] == '{' || s[i] == '['){
+            st.emplace(s[i]);
             }
           
         }
