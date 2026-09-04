@@ -25,14 +25,12 @@ public:
 
         // using Xor 
         int a = 0;
-        for(int i = 0 ; i < t.length();i++){
+        for(int i = 0 ; i < s.length();i++){
             a = a ^ s[i] ^ t[i];
         }
-        if(a == 0){
-            return t[t.length() - 1];
-        }else{
-            return char(a);
-        }
+        a=a^t[s.length()];
+        return a;
+        
     }
         
 };
