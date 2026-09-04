@@ -28,9 +28,8 @@ public:
         for(int i = 0 ; i < s.length();i++){
             a = a ^ s[i] ^ t[i];
         }
-        a=a^t[s.length()];
-        return a;
-        
+       a=a^t[s.length()];
+      return char(a);
     }
         
 };
